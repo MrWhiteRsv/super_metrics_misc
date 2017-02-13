@@ -50,6 +50,8 @@ def make_queries(infile_name, outfile_name):
     entry['uuid'] = uuid
     entry['photo_url'] = parsed_line['photo_url']
     entry['price'] = parsed_line['price']
+    entry['discount_percent'] = parsed_line['discount_percent']
+    entry['category'] = parsed_line['category']
     entry['location'] = parsed_line['location']
     entry['ndbno'] = ndbno
     entry['name'] = report['report']['food']['name']
