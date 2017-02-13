@@ -1,4 +1,3 @@
-import requests
 import sys, getopt
 
 import json
@@ -20,14 +19,7 @@ def create_revolution_event(revolution_counter, start_time):
   event["revolution_counter"] = revolution_counter
   return event
 
-
 def make_fake_trip(outfile_name):
-  """
-        this.beaconsGraph.addEdgeLength('34:b1:f7:d3:91:c8', '34:b1:f7:d3:9c:cb', 20);
-      this.beaconsGraph.addEdgeLength('34:b1:f7:d3:9c:cb', '34:b1:f7:d3:91:e4', 200);
-      this.beaconsGraph.addEdgeLength('34:b1:f7:d3:91:e4', '34:b1:f7:d3:9d:eb', 20);
-      this.beaconsGraph.addEdgeLength('34:b1:f7:d3:9d:eb', '34:b1:f7:d3:91:c8', 200);
-  """
   outfile = open(outfile_name, 'w+')
   revolution_counter = 0
   time = 0.0
