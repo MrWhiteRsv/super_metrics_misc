@@ -34,15 +34,15 @@ def make_fake_trip(outfile_name):
   
   for i in range(10):
     revolution_counter += 1
-    time = time + 200.0
+    time = time + 80.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
   ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9c:cb', start_time = time - 15, nearest_time = time, end_time = time + 15)
   outfile.write(json.dumps(ble_event) + '\n')  
   
-  for i in range(10):
+  for i in range(80):
     revolution_counter += 1
-    time = time + 200.0
+    time = time + 80.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
   ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:e4', start_time = time - 15, nearest_time = time, end_time = time + 15)
@@ -50,15 +50,15 @@ def make_fake_trip(outfile_name):
     
   for i in range(10):
     revolution_counter += 1
-    time = time + 200.0
+    time = time + 80.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
   ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9d:eb', start_time = time - 15, nearest_time = time, end_time = time + 15)
   outfile.write(json.dumps(ble_event) + '\n') 
   
-  for i in range(10):
+  for i in range(80):
     revolution_counter += 1
-    time = time + 200.0
+    time = time + 80.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
   ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8', start_time = time - 15, nearest_time = time, end_time = time + 15)
