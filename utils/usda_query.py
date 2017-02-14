@@ -44,10 +44,15 @@ def make_queries(infile_name, outfile_name):
     except ValueError:
       print("Could not parse line: " + line)
       continue
+    
     uuid = parsed_line['uuid']
-    ndbno = get_ndbo(uuid)
-    report = get_report(ndbno)
     entry['uuid'] = uuid
+    if 'ndbno' in parsed_line:
+      ndbno = parsed_line['ndbno']
+    else:
+      ndbno = get_ndbo(uuid)
+    report = get_report(ndbno)
+    # print (report)
     entry['name'] = parsed_line['name']
     entry['all_photo_urls'] = parsed_line['all_photo_urls']
     entry['price'] = parsed_line['price']
@@ -56,10 +61,12 @@ def make_queries(infile_name, outfile_name):
     entry['discount_percent'] = parsed_line['discount_percent']
     entry['category'] = parsed_line['category']
     entry['ndbno'] = ndbno
-    entry['description'] = report['report']['food']['name']
-    entry['ingridiants'] = report['report']['food']['ing']['desc']
+    food = report['report']['food']
+    entry['description'] = food['name']
+    if 'ing' in food:
+      entry['ingridiants'] = food['ing']['desc']
     entry['nutrients'] = extract_nutrients_from_report(report)
-    outfile.write(json.dumps(entry))
+    outfile.write(json.dumps(entry) + '\n\n')
   infile.close()
   outfile.close()
   
