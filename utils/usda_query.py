@@ -48,13 +48,15 @@ def make_queries(infile_name, outfile_name):
     ndbno = get_ndbo(uuid)
     report = get_report(ndbno)
     entry['uuid'] = uuid
-    entry['photo_url'] = parsed_line['photo_url']
+    entry['name'] = parsed_line['name']
+    entry['all_photo_urls'] = parsed_line['all_photo_urls']
     entry['price'] = parsed_line['price']
+    entry['location_px'] = parsed_line['location_px']
+    entry['location_str'] = parsed_line['location_str']
     entry['discount_percent'] = parsed_line['discount_percent']
     entry['category'] = parsed_line['category']
-    entry['location'] = parsed_line['location']
     entry['ndbno'] = ndbno
-    entry['name'] = report['report']['food']['name']
+    entry['description'] = report['report']['food']['name']
     entry['ingridiants'] = report['report']['food']['ing']['desc']
     entry['nutrients'] = extract_nutrients_from_report(report)
     outfile.write(json.dumps(entry))
