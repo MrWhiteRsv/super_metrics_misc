@@ -2,13 +2,16 @@ import sys, getopt
 
 import json
 
-def crete_ble_event(rssi, mac, time_sec):
-  # {"topic": "cart/cartId/raw_ble", "rssi": -84, "mac": "34:b1:f7:d3:9d:a3", "time_sec": 1480191901.882946}
+def create_ble_event(nearest_rssi, mac, start_time, nearest_time, end_time):
+  # {"nearest_rssi": -61, "start_time": 1480191915.954596, "topic": "cart/cartId/ble",
+  # "mac": "34:b1:f7:d3:9d:a3", "end_time": 1480191919.968618, "nearest_time": 1480191915.954596}
   event = {}
-  event["topic"] = "cart/cartId/raw_ble"
-  event["rssi"] = rssi
+  event["topic"] = "cart/cartId/ble"
+  event["nearest_rssi"] = nearest_rssi
   event["mac"] = mac
-  event["time_sec"] = time_sec
+  event["start_time"] = start_time
+  event["nearest_time"] = nearest_time
+  event["end_time"] = end_time    
   return event
 
 def create_revolution_event(revolution_counter, start_time):
@@ -25,36 +28,41 @@ def make_fake_trip(outfile_name):
   time = 0.0
   
   time = time + 100.0
-  outfile.write(json.dumps(crete_ble_event(rssi = -70, mac = '34:b1:f7:d3:91:c8', time_sec = time)) +'\n')
+  
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  outfile.write(json.dumps(ble_event) +'\n')
   
   for i in range(10):
     revolution_counter += 1
     time = time + 200.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
-  outfile.write(json.dumps(crete_ble_event(rssi = -70, mac = '34:b1:f7:d3:9c:cb', time_sec = time)) +'\n')
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9c:cb', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  outfile.write(json.dumps(ble_event) + '\n')  
   
   for i in range(10):
     revolution_counter += 1
     time = time + 200.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
-  outfile.write(json.dumps(crete_ble_event(rssi = -70, mac = '34:b1:f7:d3:91:e4', time_sec = time)) +'\n')
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:e4', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  outfile.write(json.dumps(ble_event) + '\n') 
+    
+  for i in range(10):
+    revolution_counter += 1
+    time = time + 200.0
+    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
+  time = time + 100.0
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9d:eb', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  outfile.write(json.dumps(ble_event) + '\n') 
   
   for i in range(10):
     revolution_counter += 1
     time = time + 200.0
     outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
   time = time + 100.0
-  outfile.write(json.dumps(crete_ble_event(rssi = -70, mac = '34:b1:f7:d3:9d:eb', time_sec = time)) +'\n')
-  
-  for i in range(10):
-    revolution_counter += 1
-    time = time + 200.0
-    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
-  time = time + 100.0
-  outfile.write(json.dumps(crete_ble_event(rssi = -70, mac = '34:b1:f7:d3:91:c8', time_sec = time)) +'\n')
-  
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  outfile.write(json.dumps(ble_event) + '\n')   
   
   outfile.close()
   
