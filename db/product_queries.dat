@@ -1,11 +1,11 @@
 {"uuid":"836093010028", "name":"IZZE", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
 
-#{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
+{"uuid":"14602", "ndbno":14602, "name":"Miolo Reserva Merlot 2009", "location_str":"aisle 16", "all_photo_urls":["merlot.png"], "price":"$43.99", "location_px" : {"px" : 0.575, "py" : 0.3}, "discount_percent" : 20, "category" : "gourmet" }
+{"uuid":"14097", "ndbno":14097, "name":"Biltmore Estate Cabernet Sauvignon", "location_str":"aisle 16", "all_photo_urls":["cab.png"], "price":"$18.99", "location_px" : {"px" : 0.595, "py" : 0.6}, "discount_percent" : 0, "category" : "discount" }
+{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 17", "all_photo_urls":["budweiser.png"], "price":"$7.99", "location_px" : {"px" : 0.61, "py" : 0.4}, "discount_percent" : 15, "category" : "discount" }
+{"uuid":"046567000299", "name":"Raley's Root Beer", "location_str":"aisle 17", "all_photo_urls":["root_beer.png"], "price":"$12.99", "location_px" : {"px" : 0.63, "py" : 0.7}, "discount_percent" : 0, "category" : "gourmet" }
+{"uuid":"00049000000443", "name":"Coca Cola Bottle", "location_str":"aisle 22", "all_photo_urls":["coke_bottle.png"], "price":"$1.59", "location_px" : {"px" : 0.790, "py" : 0.4}, "discount_percent" : 25, "category" : "discount" }
 
-#{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
-#{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
-#{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
-#{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
 
 
 #{"uuid":"00038000001109", "photo_url":"bla", "price":"$99", "location" : {"px" : 0, "py" : 0} }
