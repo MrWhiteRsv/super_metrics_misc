@@ -1,6 +1,8 @@
 import sys, getopt
 
+import calendar
 import json
+import time
 
 def create_ble_event(nearest_rssi, mac, start_time, nearest_time, end_time):
   # {"nearest_rssi": -61, "start_time": 1480191915.954596, "topic": "cart/cartId/ble",
@@ -14,56 +16,75 @@ def create_ble_event(nearest_rssi, mac, start_time, nearest_time, end_time):
   event["end_time"] = end_time    
   return event
 
-def create_revolution_event(revolution_counter, start_time):
-  # {"topic": "cart/cartId/revolution", "revolution_counter": 1, "start_time": 1480191833.059162}
+def create_revolution_event(start_time, forward_counter, backward_counter):
+  # {"topic": "cart/cartId/revolution", "start_time": 1487276190.920604, "forward_counter": 6, "backward_counter": 15}
   event = {}
   event["topic"] = "cart/cartId/revolution"
   event["start_time"] = start_time
-  event["revolution_counter"] = revolution_counter
+  event["forward_counter"] = forward_counter
+  event["backward_counter"] = backward_counter
   return event
 
+def write_fake_segment(num_rev, forward, outfile, state):
+  """
+    Write num_rev either forward or backward to outfile and update counters.
+    Args:
+      num_rev (int): number of revolutions in segment.
+      forward (boolean): true if moving forward, flase if backward.
+      outfile: the file in which to write the segment revolution events as json.
+      state (dictioary): holding both 'forward_counter' and 'backward_counter' value along with 'time_since_epoch'.
+    """
+  for i in range(num_rev):
+    state['forward_counter'] += 1 if forward else 0
+    state['backward_counter'] += 0 if forward else 1
+    state['time_since_epoch'] = state['time_since_epoch'] + 80.0
+    outfile.write(json.dumps(create_revolution_event(start_time = state['time_since_epoch'],
+        forward_counter = state['forward_counter'], backward_counter = state['backward_counter'])) +'\n')
+
 def make_fake_trip(outfile_name):
+  state = {}
+  state['forward_counter'] = 0
+  state['backward_counter'] = 0
+  state['time_since_epoch'] = calendar.timegm(time.gmtime())
+  
   outfile = open(outfile_name, 'w+')
   revolution_counter = 0
-  time = 0.0
+  time_since_epoch = calendar.timegm(time.gmtime())
   
-  time = time + 100.0
-  
-  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8',
+      start_time = time_since_epoch - 15, nearest_time = time_since_epoch,
+      end_time = time_since_epoch + 15)
   outfile.write(json.dumps(ble_event) +'\n')
   
-  for i in range(10):
-    revolution_counter += 1
-    time = time + 80.0
-    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
-  time = time + 100.0
-  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9c:cb', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  time_since_epoch = time_since_epoch + 100.0
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9c:cb',
+      start_time = time_since_epoch - 15, nearest_time = time_since_epoch,
+      end_time = time_since_epoch + 15)
   outfile.write(json.dumps(ble_event) + '\n')  
   
-  for i in range(80):
-    revolution_counter += 1
-    time = time + 80.0
-    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
-  time = time + 100.0
-  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:e4', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  write_fake_segment(num_rev = 30, forward = True, outfile = outfile, state = state)
+  write_fake_segment(num_rev = 20, forward = False, outfile = outfile, state = state)
+  write_fake_segment(num_rev = 70, forward = True, outfile = outfile, state = state)
+  time_since_epoch = time_since_epoch + 100.0
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:e4',
+      start_time = time_since_epoch - 15, nearest_time = time_since_epoch,
+      end_time = time_since_epoch + 15)
   outfile.write(json.dumps(ble_event) + '\n') 
     
-  for i in range(10):
-    revolution_counter += 1
-    time = time + 80.0
-    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
-  time = time + 100.0
-  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9d:eb', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  time_since_epoch = time_since_epoch + 100.0
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:9d:eb',
+      start_time = time_since_epoch - 15, nearest_time = time_since_epoch,
+      end_time = time_since_epoch + 15)
   outfile.write(json.dumps(ble_event) + '\n') 
   
-  for i in range(80):
-    revolution_counter += 1
-    time = time + 80.0
-    outfile.write(json.dumps(create_revolution_event(revolution_counter, time)) +'\n')
-  time = time + 100.0
-  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8', start_time = time - 15, nearest_time = time, end_time = time + 15)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  time_since_epoch = time_since_epoch + 100.0
+  ble_event = create_ble_event(nearest_rssi = -70, mac = '34:b1:f7:d3:91:c8',
+      start_time = time_since_epoch - 15, nearest_time = time_since_epoch,
+      end_time = time_since_epoch + 15)
   outfile.write(json.dumps(ble_event) + '\n')   
-  
   outfile.close()
   
 def main(argv):
