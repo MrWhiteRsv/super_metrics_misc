@@ -16,13 +16,14 @@ def create_ble_event(nearest_rssi, mac, start_time, nearest_time, end_time):
   event["end_time"] = end_time    
   return event
 
-def create_revolution_event(start_time, forward_counter, backward_counter):
+def create_revolution_event(start_time, forward_counter, backward_counter, forward_revolution):
   # {"topic": "cart/cartId/revolution", "start_time": 1487276190.920604, "forward_counter": 6, "backward_counter": 15}
   event = {}
   event["topic"] = "cart/cartId/revolution"
   event["start_time"] = start_time
   event["forward_counter"] = forward_counter
   event["backward_counter"] = backward_counter
+  event["forward_revolution"] = forward_revolution
   return event
 
 def write_fake_segment(num_rev, forward, outfile, state):
@@ -32,14 +33,17 @@ def write_fake_segment(num_rev, forward, outfile, state):
       num_rev (int): number of revolutions in segment.
       forward (boolean): true if moving forward, flase if backward.
       outfile: the file in which to write the segment revolution events as json.
-      state (dictioary): holding both 'forward_counter' and 'backward_counter' value along with 'time_since_epoch'.
+      state (dictioary): holding both 'forward_counter' and
+          'backward_counter' value along with 'time_since_epoch'.
     """
   for i in range(num_rev):
     state['forward_counter'] += 1 if forward else 0
     state['backward_counter'] += 0 if forward else 1
     state['time_since_epoch'] = state['time_since_epoch'] + 80.0
     outfile.write(json.dumps(create_revolution_event(start_time = state['time_since_epoch'],
-        forward_counter = state['forward_counter'], backward_counter = state['backward_counter'])) +'\n')
+        forward_counter = state['forward_counter'],
+        backward_counter = state['backward_counter'],
+        forward_revolution = forward)) +'\n')
 
 def make_fake_trip(outfile_name):
   state = {}
