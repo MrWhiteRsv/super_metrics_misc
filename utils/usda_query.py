@@ -8,6 +8,9 @@ def get_ndbo(uuid):
   url = 'http://api.nal.usda.gov/ndb/search?'
   payload = {'q': uuid, 'max': '2500', 'offset' : '0', 'api_key':'DEMO_KEY'}
   res = requests.post(url, headers=headers,  params=payload).json()
+  print ('res', res)
+  if not 'list' in res or not 'item' in res['list']:
+    return None
   ndbno = res['list']['item'][0]['ndbno']
   return ndbno
    
@@ -51,8 +54,7 @@ def make_queries(infile_name, outfile_name):
       ndbno = parsed_line['ndbno']
     else:
       ndbno = get_ndbo(uuid)
-    report = get_report(ndbno)
-    # print (report)
+    #print ('uuid', uuid)
     entry['name'] = parsed_line['name']
     entry['all_photo_urls'] = parsed_line['all_photo_urls']
     entry['price'] = parsed_line['price']
@@ -60,17 +62,17 @@ def make_queries(infile_name, outfile_name):
     entry['location_str'] = parsed_line['location_str']
     entry['discount_percent'] = parsed_line['discount_percent']
     entry['category'] = parsed_line['category']
-    entry['ndbno'] = ndbno
-    food = report['report']['food']
-    entry['description'] = food['name']
-    if 'ing' in food:
-      entry['ingridiants'] = food['ing']['desc']
-    entry['nutrients'] = extract_nutrients_from_report(report)
+    if ndbno:
+      report = get_report(ndbno)
+      entry['ndbno'] = ndbno
+      food = report['report']['food']
+      entry['description'] = food['name']
+      if 'ing' in food:
+        entry['ingridiants'] = food['ing']['desc']
+      entry['nutrients'] = extract_nutrients_from_report(report)
     outfile.write(json.dumps(entry) + '\n\n')
   infile.close()
   outfile.close()
-  
-
 
 def main(argv):
   try:
