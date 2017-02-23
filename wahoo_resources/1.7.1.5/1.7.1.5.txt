@@ -1,0 +1,13 @@
+1.7.1.5
+
+Fix crash when a bad CYCLE POWER METER MEASUREMENT is received over BTLE interface
+
+
+
+1.7.1.4
+
+HardwareConnector: if missing permissions, just log error, don’t throw AssertionError
+
+HardwareConnector: if functions called while shutdown, just log error, don’t throw IllegalStateExceptions
+
+HardwareConnector: fix bug where shutdown() would crash if ANT sensors connecting

@@ -1,0 +1,5 @@
+Port cadence not working for ANT+ powertap 
+ANT+ bike power: Calculate correct speed for all wheel torque types 
+AntPlusBikePowerSensor: Port double speed fix
+Fix issue where the 'cancel firmware upgrade' 10sec delay disconnect was occurring incorrectly
+Fix missing break statements in switch
