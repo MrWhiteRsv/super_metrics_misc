@@ -1,5 +1,6 @@
-package com.io.supermarket.wahoodemo;
+package com.io.supermarket.wahoodemo.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,29 +10,16 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.wahoofitness.connector.HardwareConnector;
-import com.wahoofitness.connector.HardwareConnectorEnums;
-import com.wahoofitness.connector.HardwareConnectorTypes;
-import com.wahoofitness.connector.conn.connections.SensorConnection;
+import com.io.supermarket.wahoodemo.R;
+
+import service.HardwareConnectionService;
 
 public class MainActivity extends AppCompatActivity {
 
-  private HardwareConnector mHardwareConnector = null;
-  private final HardwareConnector.Listener  mHardwareConnectorListener = new HardwareConnector.Listener ()  {
 
-    @Override
-    public void onHardwareConnectorStateChanged(HardwareConnectorTypes.NetworkType networkType,
-                                                HardwareConnectorEnums.HardwareConnectorState hardwareConnectorState) {
-    }
-
-    @Override
-    public void onFirmwareUpdateRequired(SensorConnection sensorConnection, String s, String s1) {
-    }
-  };
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -45,13 +33,11 @@ public class MainActivity extends AppCompatActivity {
             .setAction("Action", null).show();
       }
     });
-    mHardwareConnector = new HardwareConnector(this, mHardwareConnectorListener);
+    Intent intent = new Intent(this, HardwareConnectionService.class);
+    startService(intent);
   }
 
-  @Override
-  public  void onDestroy () { super . onDestroy ();
-    mHardwareConnector . shutdown ();
-  }
+
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
