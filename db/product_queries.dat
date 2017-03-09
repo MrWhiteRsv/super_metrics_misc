@@ -1,29 +1,23 @@
-{"uuid":"836093010028", "name":"IZZE", "location_str":"aisle 2", "all_photo_urls":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
-
-{"uuid":"14602", "ndbno":14602, "name":"Miolo Reserva Merlot 2009", "location_str":"aisle 16", "all_photo_urls":["merlot.png"], "price":"$43.99", "location_px" : {"px" : 0.575, "py" : 0.3}, "discount_percent" : 20, "category" : "gourmet" }
-
-
-{"uuid":"14097", "ndbno":14097, "name":"Biltmore Estate Cabernet Sauvignon", "location_str":"aisle 16", "all_photo_urls":["cab.png"], "price":"$18.99", "location_px" : {"px" : 0.595, "py" : 0.6}, "discount_percent" : 0, "category" : "discount" }
-{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 17", "all_photo_urls":["budweiser.png"], "price":"$7.99", "location_px" : {"px" : 0.61, "py" : 0.4}, "discount_percent" : 15, "category" : "discount" }
-{"uuid":"046567000299", "name":"Raley's Root Beer", "location_str":"aisle 17", "all_photo_urls":["root_beer.png"], "price":"$12.99", "location_px" : {"px" : 0.63, "py" : 0.7}, "discount_percent" : 0, "category" : "gourmet" }
-{"uuid":"00049000000443", "name":"Coca Cola Bottle", "location_str":"aisle 22", "all_photo_urls":["coke_bottle.png"], "price":"$1.59", "location_px" : {"px" : 0.790, "py" : 0.4}, "discount_percent" : 25, "category" : "discount" }
-{"uuid":"45155607", "name":"Pellergino", "location_str":"aisle 11", "all_photo_urls":["pellergino.png"], "price":"$19.99", "location_px" : {"px" : 0.395, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" }
-
-{"uuid":"762111083173", "name":"Tazo", "location_str":"aisle 11", "all_photo_urls":["tazo.png"], "price":"$4.49", "location_px" : {"px" : 4175, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" }
-{"uuid":"45146174", "name":"Peet's coffee", "location_str":"aisle 12", "all_photo_urls":["peets_coffee.png"], "price":"$13.99", "location_px" : {"px" : 0.454, "py" : 0.6}, "discount_percent" : 0, "category" : "gourmet" }
-{"uuid":"072036080196", "name":"Tomato Ketchup", "location_str":"aisle 14", "all_photo_urls":["heinz_ketchup.png"], "price":"$2.99", "location_px" : {"px" : 0.5, "py" : 0.5}, "discount_percent" : 15, "category" : "discount" }
-
-{"uuid":"45035266", "name":"Nutella Spread", "location_str":"aisle 14", "all_photo_urls":["nutella.png"], "price":"$2.99", "location_px" : {"px" : 0.525, "py" : 0.55}, "discount_percent" : 15, "category" : "discount" }
-
-{"uuid":"035000741264", "name":"Colgate Toothpaste Whitening", "location_str":"aisle 19", "all_photo_urls":["colgate.png"], "price":"$19.99", "location_px" : {"px" : 0.682, "py" : 0.4}, "discount_percent" : 10, "category" : "discount" }
-{"uuid":"037000138785", "name":"Tide Laundry Detergent", "location_str":"aisle 21", "all_photo_urls":["tide.png"], "price":"$2.96", "location_px" : {"px" : 0.755, "py" : 0.45}, "discount_percent" : 15, "category" : "discount" }
-{"uuid":"11531", "name":"San Marzano Crushed Tomatoes", "location_str":"aisle 4", "all_photo_urls":["whole_tomatos.png"], "price":"$2.96", "location_px" : {"px" : 0.141, "py" : 0.6}, "discount_percent" : 0, "category" : "gourmet" } 
-{"uuid":"02046", "name":"English Mustard", "location_str":"aisle 5", "all_photo_urls":["mustard.png"], "price":"$2.96", "location_px" : {"px" : 0.201, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" } 
-{"uuid":"45226473", "name":"Fresh Mozzarella", "location_str":"aisle 4", "all_photo_urls":["mozzarella.png"], "price":"$6.99", "location_px" : {"px" : 0.160, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" } 
-{"uuid":"45016242", "name":"Rice Ramen", "location_str":"aisle 6", "all_photo_urls":["rice_ramen.png"], "price":"$20.81", "location_px" : {"px" : 0.235, "py" : 0.3}, "discount_percent" : 0, "category" : "asian" } 
-{"uuid":"45047738", "name":"Udon Noodles", "location_str":"aisle 6", "all_photo_urls":["udon.png"], "price":"$2.96", "location_px" : {"px" : 0.215, "py" : 0.55}, "discount_percent" : 0, "category" : "asian" } 
-{"uuid":"45007485", "name":"Lychee", "location_str":"aisle 4", "all_photo_urls":["lychee.png"], "price":"$3.69", "location_px" : {"px" : 0.160, "py" : 0.6}, "discount_percent" : 0, "category" : "asian" } 
-{"uuid":"070844005073", "name":"Hoisin Sauce", "location_str":"aisle 5", "all_photo_urls":["hoisin.png"], "price":"$2.29", "location_px" : {"px" : 0.181, "py" : 0.3}, "discount_percent" : 0, "category" : "asian" }
-{"uuid":"041390002847", "name":"Soy Sauce", "location_str":"aisle 6", "all_photo_urls":["soy_sauce.png"], "price":"$2.29", "location_px" : {"px" : 0.215, "py" : 0.45}, "discount_percent" : 0, "category" : "asian" } 
-{"uuid":"8084360115101", "name":"Sesame Oil", "location_str":"aisle 6", "all_photo_urls":["sesame_oil.png"], "price":"$7.99", "location_px" : {"px" : 0.215, "py" : 0.58}, "discount_percent" : 0, "category" : "asian" } 
-#{"uuid":"738055039545", "name":"Water Chestnut", "location_str":"aisle 4", "all_photo_urls":["water_chestnut.png"], "price":"$1.29", "location_px" : {"px" : 0.141, "py" : 0.2}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"836093010028", "name":"IZZE", "location_str":"aisle 2", "images":["836093010028.png"], "price":"$7.99", "location_px" : {"px" : 0.094, "py" : 0.3}, "discount_percent" : 20, "category" : "discount" }
+{"uuid":"14602", "ndbno":14602, "name":"Miolo Reserva Merlot 2009", "location_str":"aisle 16", "images":["merlot.png"], "price":"$43.99", "location_px" : {"px" : 0.575, "py" : 0.3}, "discount_percent" : 20, "category" : "gourmet" }
+{"uuid":"14097", "ndbno":14097, "name":"Biltmore Estate Cabernet Sauvignon", "location_str":"aisle 16", "images":["cab.png"], "price":"$18.99", "location_px" : {"px" : 0.595, "py" : 0.6}, "discount_percent" : 0, "category" : "discount" }
+{"uuid":"14004", "ndbno":14004, "name":"Budweiser Beer", "location_str":"aisle 17", "images":["budweiser.png"], "price":"$7.99", "location_px" : {"px" : 0.61, "py" : 0.4}, "discount_percent" : 15, "category" : "discount" }
+{"uuid":"046567000299", "name":"Raley's Root Beer", "location_str":"aisle 17", "images":["root_beer.png"], "price":"$12.99", "location_px" : {"px" : 0.63, "py" : 0.7}, "discount_percent" : 0, "category" : "gourmet" }
+{"uuid":"00049000000443", "name":"Coca Cola Bottle", "location_str":"aisle 22", "images":["coke_bottle.png"], "price":"$1.59", "location_px" : {"px" : 0.790, "py" : 0.4}, "discount_percent" : 25, "category" : "discount" }
+{"uuid":"45155607", "name":"Pellergino", "location_str":"aisle 11", "images":["pellergino.png"], "price":"$19.99", "location_px" : {"px" : 0.395, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" }
+{"uuid":"762111083173", "name":"Tazo", "location_str":"aisle 11", "images":["tazo.png"], "price":"$4.49", "location_px" : {"px" : 4175, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" }
+{"uuid":"45146174", "name":"Peet's coffee", "location_str":"aisle 12", "images":["peets_coffee.png"], "price":"$13.99", "location_px" : {"px" : 0.454, "py" : 0.6}, "discount_percent" : 0, "category" : "gourmet" }
+{"uuid":"072036080196", "name":"Tomato Ketchup", "location_str":"aisle 14", "images":["heinz_ketchup.png"], "price":"$2.99", "location_px" : {"px" : 0.5, "py" : 0.5}, "discount_percent" : 15, "category" : "discount" }
+{"uuid":"45035266", "name":"Nutella Spread", "location_str":"aisle 14", "images":["nutella.png"], "price":"$2.99", "location_px" : {"px" : 0.525, "py" : 0.55}, "discount_percent" : 15, "category" : "discount" }
+{"uuid":"035000741264", "name":"Colgate Toothpaste Whitening", "location_str":"aisle 19", "images":["colgate.png"], "price":"$19.99", "location_px" : {"px" : 0.682, "py" : 0.4}, "discount_percent" : 10, "category" : "discount" }
+{"uuid":"037000138785", "name":"Tide Laundry Detergent", "location_str":"aisle 21", "images":["tide.png"], "price":"$2.96", "location_px" : {"px" : 0.755, "py" : 0.45}, "discount_percent" : 15, "category" : "discount" }
+{"uuid":"11531", "name":"San Marzano Crushed Tomatoes", "location_str":"aisle 4", "images":["whole_tomatos.png"], "price":"$2.96", "location_px" : {"px" : 0.141, "py" : 0.6}, "discount_percent" : 0, "category" : "gourmet" } 
+{"uuid":"02046", "name":"English Mustard", "location_str":"aisle 5", "images":["mustard.png"], "price":"$2.96", "location_px" : {"px" : 0.201, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" } 
+{"uuid":"45226473", "name":"Fresh Mozzarella", "location_str":"aisle 4", "images":["mozzarella.png"], "price":"$6.99", "location_px" : {"px" : 0.160, "py" : 0.2}, "discount_percent" : 0, "category" : "gourmet" } 
+{"uuid":"45016242", "name":"Rice Ramen", "location_str":"aisle 6", "images":["rice_ramen.png"], "price":"$20.81", "location_px" : {"px" : 0.235, "py" : 0.3}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"45047738", "name":"Udon Noodles", "location_str":"aisle 6", "images":["udon.png"], "price":"$2.96", "location_px" : {"px" : 0.215, "py" : 0.55}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"45007485", "name":"Lychee", "location_str":"aisle 4", "images":["lychee.png"], "price":"$3.69", "location_px" : {"px" : 0.160, "py" : 0.6}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"070844005073", "name":"Hoisin Sauce", "location_str":"aisle 5", "images":["hoisin.png"], "price":"$2.29", "location_px" : {"px" : 0.181, "py" : 0.3}, "discount_percent" : 0, "category" : "asian" }
+{"uuid":"041390002847", "name":"Soy Sauce", "location_str":"aisle 6", "images":["soy_sauce.png"], "price":"$2.29", "location_px" : {"px" : 0.215, "py" : 0.45}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"8084360115101", "name":"Sesame Oil", "location_str":"aisle 6", "images":["sesame_oil.png"], "price":"$7.99", "location_px" : {"px" : 0.215, "py" : 0.58}, "discount_percent" : 0, "category" : "asian" } 
+{"uuid":"738055039545", "name":"Water Chestnut", "location_str":"aisle 4", "images":["water_chestnut.png"], "price":"$1.29", "location_px" : {"px" : 0.141, "py" : 0.2}, "discount_percent" : 0, "category" : "asian" } 

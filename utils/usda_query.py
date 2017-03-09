@@ -54,9 +54,8 @@ def make_queries(infile_name, outfile_name):
       ndbno = parsed_line['ndbno']
     else:
       ndbno = get_ndbo(uuid)
-    #print ('uuid', uuid)
     entry['name'] = parsed_line['name']
-    entry['all_photo_urls'] = parsed_line['all_photo_urls']
+    entry['images'] = parsed_line['images']
     entry['price'] = parsed_line['price']
     entry['location_px'] = parsed_line['location_px']
     entry['location_str'] = parsed_line['location_str']
@@ -68,7 +67,7 @@ def make_queries(infile_name, outfile_name):
       food = report['report']['food']
       entry['description'] = food['name']
       if 'ing' in food:
-        entry['ingridiants'] = food['ing']['desc']
+        entry['ingredients'] = food['ing']['desc']
       entry['nutrients'] = extract_nutrients_from_report(report)
     outfile.write(json.dumps(entry) + '\n\n')
   infile.close()
