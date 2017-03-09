@@ -2,6 +2,8 @@
 
 ## Product Details
 
+Example: {"category": "asian", "location_str": "aisle 6", "uuid": "8084360115101", "ingredients": "100% MECHANICALLY (EXPELLER) PRESSED REFINED SESAME OIL", "ndbno": "45017750", "nutrients": [{"unit": "kcal", "name": "Energy", "value": "857"}, {"unit": "mg", "name": "Cholesterol", "value": "0"}], "price": "$7.99", "location_px": {"px": 0.215, "py": 0.58}, "description": "SPECTRUM, SESAME OIL, UPC: 8084360115101", "discount_percent": 0, "images": ["sesame_oil.png"], "name": "Sesame Oil"}
+
 ## MQTT
 
 ### Web Client Messages
