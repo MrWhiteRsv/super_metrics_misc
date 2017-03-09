@@ -70,25 +70,30 @@ def make_fake_trip(outfile_name):
   
   outfile = open(outfile_name, 'w+')
   revolution_counter = 0
-  write_ble_event(mac = '34:b1:f7:d3:91:c8', outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:91:f8', outfile = outfile, state = state)  
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:91:f8', outfile = outfile, state = state)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:9c:cb', outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:9e:2b', outfile = outfile, state = state)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:9d:eb', outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)  
+  write_ble_event(mac = '34:b1:f7:d3:91:f8', outfile = outfile, state = state)
   
   write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
-  
-  
-  write_ble_event(mac = '34:b1:f7:d3:91:c8', outfile = outfile, state = state)
+  write_ble_event(mac = '34:b1:f7:d3:91:f8', outfile = outfile, state = state)
   write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
-  """write_ble_event(mac = '34:b1:f7:d3:9c:cb', outfile = outfile, state = state)
-   
+  write_ble_event(mac = '34:b1:f7:d3:9c:cb', outfile = outfile, state = state)
   write_fake_segment(num_rev = 30, forward = True, outfile = outfile, state = state)
   write_fake_segment(num_rev = 20, forward = False, outfile = outfile, state = state)
   write_fake_segment(num_rev = 70, forward = True, outfile = outfile, state = state)
-  write_ble_event(mac = '34:b1:f7:d3:91:e4', outfile = outfile, state = state)
-    
+  write_ble_event(mac = '34:b1:f7:d3:9e:2b', outfile = outfile, state = state)
   write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
   write_ble_event(mac = '34:b1:f7:d3:9d:eb', outfile = outfile, state = state)
-
   write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)  
-  write_ble_event(mac = '34:b1:f7:d3:91:c8', outfile = outfile, state = state)"""
+  write_ble_event(mac = '34:b1:f7:d3:91:f8', outfile = outfile, state = state)
   
   outfile.close()
   
