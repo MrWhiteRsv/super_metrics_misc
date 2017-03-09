@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_refresh.png",
+        "source": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/src/main/res/drawable-xxhdpi/ic_action_refresh.png"
+    },
+    {
+        "merged": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
+        "source": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_about.png",
+        "source": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/src/main/res/drawable-xxhdpi/ic_action_about.png"
+    }
+]

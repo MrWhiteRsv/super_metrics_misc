@@ -86,6 +86,39 @@ public class HardwareConnectorService extends Service {
 			}
 		}
 	};
+	
+		/**
+	 * Listens for events from the API's {@link SensorConnection}. We use the same listener for all
+	 * {@link SensorConnection}s
+	 */
+	private final SensorConnection.Listener mSensorConnectionListener = new SensorConnection.Listener() {
+
+		@Override
+		public void onNewCapabilityDetected(SensorConnection sensorConnection, CapabilityType capabilityType) {
+
+			// Notify our listeners
+			for (Listener listener : mListeners) {
+				listener.onNewCapabilityDetected(sensorConnection, capabilityType);
+			}
+		}
+
+		@Override
+		public void onSensorConnectionError(SensorConnection sensorConnection, SensorConnectionError error) {
+
+		}
+
+		@Override
+		public void onSensorConnectionStateChanged(SensorConnection sensorConnection, SensorConnectionState state) {
+
+			// Notify our listeners
+			for (Listener listener : mListeners) {
+				listener.onSensorConnectionStateChanged(sensorConnection, state);
+			}
+		}
+	};
+
+	public HardwareConnectorService() {
+	}
 
 	/** The API's main access point, the {@link HardwareConnector} */
 	private HardwareConnector mHardwareConnector;

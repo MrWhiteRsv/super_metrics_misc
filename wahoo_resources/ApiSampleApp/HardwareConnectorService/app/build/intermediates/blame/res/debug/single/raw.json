@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/res/merged/debug/raw/display_cfg_echo_default.json",
+        "source": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/src/main/res/raw/display_cfg_echo_default.json"
+    },
+    {
+        "merged": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/res/merged/debug/raw/display_cfg_rflkt_default.json",
+        "source": "/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/src/main/res/raw/display_cfg_rflkt_default.json"
+    }
+]

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.wahoofitness.samples.hardwareconnectorservice"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/androidapi.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+}

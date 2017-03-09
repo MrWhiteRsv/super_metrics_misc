@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/libs/androidapi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19c4519affc17dff8a67207ce95254d5d7c0df11">
+        <dex dex="/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/pre-dexed/debug/androidapi_a60b3d8c98a05d5a29bd45f29708fd397cae97f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/libs/libGoogleAnalyticsServices.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e887c6c9b31b39a39b0eaba981448b78902ea813">
+        <dex dex="/Users/oded/Desktop/Projects/SuperMetrics/super_metrics_misc/wahoo_resources/ApiSampleApp/HardwareConnectorService/app/build/intermediates/pre-dexed/debug/libGoogleAnalyticsServices_8a096375891b80fd23cea8dda0365f921a9cbe78.jar" />
+    </item>
+
+</items>
