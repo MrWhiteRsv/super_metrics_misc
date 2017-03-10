@@ -9,11 +9,18 @@ Example: {"category": "asian", "location_str": "aisle 6", "uuid": "8084360115101
 ### Web Client Messages
 
 * Cart Location
- * Chanel: monitor/cartId/location
- * Example: {"px":0.16085714285714287,"py":0.12}
+  * Chanel: monitor/cartId/location
+  * Example: {"px":0.16085714285714287,"py":0.12}
+
+#### Commands
+
 * Change BLE threshold
- * Channel: monitor/cartId/command
- * Example: {"changeThreshold":true, "mac":"34:b1:f7:d3:91:f8", "threshold":-50}
+  * Channel: monitor/cartId/command
+  * Example: {"changeThreshold":true, "mac":"34:b1:f7:d3:91:f8", "threshold":-50}
+
+* Capture Image
+  * Channel: monitor/cartId/command
+  * Example: {"changeThreshold":true, "mac":"34:b1:f7:d3:91:f8", "threshold":-50}
 
 ### Cart Detector Messages
 

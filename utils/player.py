@@ -29,10 +29,10 @@ def publish_log(file_name):
       continue
     if (topic == 'cart/cartId/hall_reading'):
       continue
-    line_time = parsed_line['start_time']
-    if not record_start_time:
-      record_start_time = line_time
-    time_since_record_start = parsed_line['start_time'] - record_start_time
+    #line_time = parsed_line['start_time']
+    #if not record_start_time:
+    #  record_start_time = line_time
+    #time_since_record_start = parsed_line['start_time'] - record_start_time
     parsed_line.pop('topic', 0)
     pub(topic, json.dumps(parsed_line))
     print(topic, parsed_line)
