@@ -30,10 +30,18 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class MainPage(webapp2.RequestHandler):
+class AllProducts(webapp2.RequestHandler):
   def get(self):
-    guestbook_name = self.request.get('guestbook_name', DEFAULT_GUESTBOOK_NAME)
-    self.response.write('HHHH1 ' + guestbook_name)
+    product_uuid = self.request.get('product_uuid', None)
+    f = open('res.jsn', 'r')
+    res = []
+    for wire in f:
+      try:
+        product_info = json.loads(wire)
+      except ValueError, e:
+        continue
+      res.append(product_info['uuid'])
+    self.response.write(json.dumps(res))
 
 class Product(webapp2.RequestHandler):
   def get(self):
@@ -44,12 +52,14 @@ class Product(webapp2.RequestHandler):
         product_info = json.loads(wire)
       except ValueError, e:
         continue
-      logging.info('product_info[\'uuid\']: ' + product_info['uuid'])
+      #logging.info('product_info[\'uuid\']: ' + product_info['uuid'])
       if (product_uuid == product_info['uuid']):
         self.response.write('Description: ' + wire)
         return;
+    self.response.write('{}')
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage),
-    ('/product', Product),
+    ('/all_products', AllProducts),
+    ('/product_details', Product),
 ], debug=True)
