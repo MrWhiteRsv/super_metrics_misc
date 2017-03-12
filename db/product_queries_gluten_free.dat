@@ -1,0 +1,5 @@
+{"uuid":"039978025357", "name":"Bob Red's Mill Tapioca Flour", "location_str":"aisle 14", "images":["tapioca_flower.png"], "price":"$7.99", "location_px" : {"px" : 0.525, "py" : 0.75}, "discount_percent" : 0, "category" : "gluten_free" }
+{"uuid":"795709040029", "name":"Wallaby Plain Yogurt", "location_str":"Dairy Fridge", "images":["wallaby_plain_yogurt.jpeg"], "price":"$4.49", "location_px" : {"px" : 0.907, "py" : 0.727}, "discount_percent" : 0, "category" : "gluten_free" }
+{"uuid":"45015721", "name":"Brown Rice Flower", "location_str":"aisle 14", "images":["brown_rice_flower.png"], "price":"$5.79", "location_px" : {"px" : 0.525, "py" : 0.65}, "discount_percent" : 0, "category" : "gluten_free" }
+{"uuid":"19159", "name":"3 Musketeers", "location_str":"register", "images":["3_musketeers.png"], "price":"$4.19", "location_px" : {"px" : 0.2, "py" : 0.89}, "discount_percent" : 0, "category" : "gluten_free" }
+{"uuid":"079200975852", "name":"Laffy Taffy", "location_str":"register", "images":["laffy_taffy.png"], "price":"$2.99", "location_px" : {"px" : 0.22, "py" : 0.89}, "discount_percent" : 0, "category" : "gluten_free" }
