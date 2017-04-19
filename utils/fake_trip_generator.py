@@ -68,18 +68,36 @@ def make_fake_trip(outfile_name):
   state['backward_counter'] = 0
   state['time_since_epoch'] = calendar.timegm(time.gmtime())
   all_macs = ['34:b1:f7:d3:90:ff', '34:b1:f7:d3:9c:cb', '34:b1:f7:d3:9d:2f',
-      '34:b1:f7:d3:9d:eb', '34:b1:f7:d3:9c:a3', '34:b1:f7:d3:9d:f6']
+      '34:b1:f7:d3:9d:eb', '34:b1:f7:d3:9c:a3', '34:b1:f7:d3:9d:f6'] #[0, 0] ->[1, 2]
   outfile = open(outfile_name, 'w+')
   revolution_counter = 0
   write_ble_event(mac = all_macs[3], outfile = outfile, state = state)  
-  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
   write_ble_event(mac = all_macs[4], outfile = outfile, state = state)
   write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
-  write_ble_event(mac = all_macs[1], outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[5], outfile = outfile, state = state) 
   write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[2], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[1], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
   write_ble_event(mac = all_macs[0], outfile = outfile, state = state)
-  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)  
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)  
   write_ble_event(mac = all_macs[3], outfile = outfile, state = state)
+
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[4], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[5], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[2], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[1], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 80, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[0], outfile = outfile, state = state)
+  write_fake_segment(num_rev = 10, forward = True, outfile = outfile, state = state)
+  write_ble_event(mac = all_macs[3], outfile = outfile, state = state)
+
   outfile.close()
   
 def main(argv):
